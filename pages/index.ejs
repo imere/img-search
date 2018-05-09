@@ -1,0 +1,45 @@
+<html>
+
+  <head>
+    <meta name="view-port" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link ref="stylesheet" href="/style/index.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <title></title>
+  </head>
+
+  <body>
+	<div class="container">
+
+		<h1 class="header">Image Search Abstraction Layer</h1>
+
+		<blockquote>
+			User stories:
+			<ul>
+			<li>According to the specified string description, obtain a set of picture addresses and text descriptions and page addresses that fit the description.</li>
+			<li>You can add a parameter ?offset=2 to the address to page the returned result.</li>
+			<li>You can get a list of search statements and return page addresses from recent searches.</li>
+			</ul>
+		</blockquote>
+
+		<h3>Example query usage:</h3>
+
+		<code>https://im-img-search.herokuapp.com/api/imagesearch/lolcats%20funny?offset=10</code>
+
+		<h3>Example query output:</h3>
+
+		<code>
+[{url: "http://i0.kym-cdn.com/photos/images/original/000/010/017/lolcats-funny-pictures-surprise-cannibalism.jpg",
+snippet: "Image - 10017] | LOLcats | Know Your Meme",thumbnail: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXBpDueya0bfWRnj-q0FfTmx01gdr1kCCSlfZ3brV8-oiVQKjZ1YwKb6c",context: "http://knowyourmeme.com/photos/10017-lolcats"}]
+		</code>
+
+		<h3>Show latest searches</h3>
+
+		<code>https://im-img-search.herokuapp.com/api/latest/imagesearch/</code>
+
+	</div>
+
+  </body>
+
+</html>
