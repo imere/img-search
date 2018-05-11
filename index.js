@@ -13,6 +13,9 @@ app.set("view engine", "ejs");
 const homeRouter = require("./home");
 app.use("/", homeRouter);
 
+const imgSearchRouter = require("./imgSearchRouter");
+app.use("/api", imgSearchRouter);
+
 app.listen(PORT, () => {
 	console.log(`Listening on port ${PORT}`);
 });
