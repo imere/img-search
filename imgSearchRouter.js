@@ -40,7 +40,7 @@ imgRouter.get("/imagesearch/:item", (req, res, next) => {
 				});
 			});
 		}else{
-			results.push(val);
+			results.push(JSON.stringify(val));
 		}
 		res.writeHead(200, {"Content-Type: application/json"});
 		res.send(JSON.stringify(results));
