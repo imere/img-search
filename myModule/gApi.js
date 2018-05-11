@@ -11,12 +11,11 @@ const getAddr = (num, query, key) => {
 const getResults = (url, cb) => {
 	let results = "";
 	https.get(url, res => {
-		res.setEncoding("utf8");
 		res.on("data", chunk => {
 			results += chunk;
 		});
 		res.on("end", () => {
-			cb(results);
+			cb(JSON.parse(results));
 		});
 	}).on("error", e => {
 		cb(e);
