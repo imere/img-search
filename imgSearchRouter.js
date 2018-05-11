@@ -2,11 +2,13 @@ const imgRouter = require("express").Router();
 const {getAddr, getResults} = require("./myModule/gApi");
 //search results
 const results = [];
+//restrict max length
+const maxres = 10;
 
 //search records
 const records = [];
 //restrict max length
-const maxLimit = 10;
+const maxrec = 10;
 
 module.exports = imgRouter;
 
@@ -20,7 +22,7 @@ imgRouter.param("item", (req, res, next, item) => {
 imgRouter.get("/imagesearch/:item", (req, res, next) => {
 	let query = req.params.item;
 	const callback = val => {
-		if(records.length > maxLimit){
+		if(records.length > maxrec){
 			records.pop();
 		}
 		if(results.length !== 0){
@@ -44,7 +46,7 @@ imgRouter.get("/imagesearch/:item", (req, res, next) => {
 		}
 		res.send(JSON.stringify(results));
 	};
-	getResults(getAddr(5, query), callback);
+	getResults(getAddr(maxres, query), callback);
 });
 
 imgRouter.get("/latest/imagesearch", (req, res, next) => {
