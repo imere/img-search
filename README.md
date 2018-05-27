@@ -7,7 +7,7 @@
 
 ### Example query usage:
 
-	https://im-img-search.herokuapp.com/api/imagesearch/lolcats%20funny?offset=10
+[https://im-img-search.herokuapp.com/api/imagesearch/lolcats%20funny?offset=10](https://im-img-search.herokuapp.com/api/imagesearch/lolcats%20funny?offset=10)
 
 ### Example query output:
 
@@ -22,4 +22,4 @@
 
 ### Show latest searches
 
-	https://im-img-search.herokuapp.com/api/latest/imagesearch/
+[https://im-img-search.herokuapp.com/api/latest/imagesearch/](https://im-img-search.herokuapp.com/api/latest/imagesearch/)
