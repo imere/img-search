@@ -1,7 +1,7 @@
 const imgRouter = require("express").Router();
 const {getAddr, getResults} = require("./myModule/gApi");
 //search results
-const results = [];
+let results = [];
 //restrict max length
 const maxres = 10;
 
